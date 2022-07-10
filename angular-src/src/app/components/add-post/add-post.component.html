@@ -1,0 +1,16 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="form-outline mb-2">
+        <label class="form-label">Title</label>
+        <input formControlName="title" type="text" id="form4Example1" class="form-control" />
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label">Body</label>
+        <textarea formControlName="content" class="form-control" id="form4Example3" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mb-4">
+        Submit
+    </button>
+
+</form>

@@ -1,0 +1,15 @@
+<section class="jumbotron">
+    <div class="container">
+
+        <div *ngIf="isLoggedIn; then logged else login "> </div>
+
+        <ng-template #login>
+            <a routerLink="/login" class="btn btn-primary my-2">Login with a user</a><a class="ml-2"
+                routerLink="/register">Or register here</a>
+        </ng-template>
+
+        <ng-template #logged>
+            <app-post></app-post>
+        </ng-template>
+
+    </div>

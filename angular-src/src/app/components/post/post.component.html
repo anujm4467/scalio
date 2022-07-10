@@ -1,0 +1,29 @@
+<div>
+    <div class="md-form mt-0">
+        <input class="form-control" type="text" placeholder="Search by ID" (input)="searchPosts($event.target.value)"
+            aria-label="Search">
+    </div>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+                <th scope="row">{{post._id}}</th>
+                <td>{{post.title}}</td>
+                <td>{{post.content}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a routerLink="/post-view" class="btn btn-primary my-2">Add Post</a>
+    </p>
+
+</div>

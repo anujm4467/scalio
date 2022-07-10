@@ -1,0 +1,7 @@
+API DOC
+
+1) post the title and body 
+
+2) get by id 
+
+3) list all post by pagination in home screen 
