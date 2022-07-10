@@ -1,4 +1,3 @@
-import * as express from 'express';
 
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
@@ -6,7 +5,6 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import config from './config';
 import { getHttpsOptionsFromConfig } from './misc';
-import { mountAngular } from './misc/angular-mounter';
 
 async function bootstrap() {
   // Create the app and allow cors and HTTPS support (if configured)
@@ -25,10 +23,6 @@ async function bootstrap() {
       transform: true,
     }),
   );
-
-  const expressApp = app
-    .getHttpAdapter()
-    .getInstance() as express.Application;
 
 
   // Start listening
