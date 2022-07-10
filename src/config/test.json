@@ -1,6 +1,12 @@
 {
+    "DB_URI": "mongodb+srv://scalio:anujm4467@cluster0.zyse8ui.mongodb.net/?retryWrites=true&w=majority",
     "CLIENT_URL": "http://localhost:4200",
     "JWT": {
         "SECRET": "T{qVK:zv:4[y'GMPvRBkA3>!BP$C5hnakvZP[f=['.f]Lg9SUJ*Y{:b*G4`3^S/C"
-    }
+    },
+    "ANGULAR": {
+        "MOUNT": false
+    },
+    "LOG_LEVEL": "debug",
+    "USE_SSR": false
 }
