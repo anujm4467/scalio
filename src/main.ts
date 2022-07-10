@@ -30,7 +30,6 @@ async function bootstrap() {
     .getHttpAdapter()
     .getInstance() as express.Application;
 
-  mountAngular(expressApp);
 
   // Start listening
   await app.listen(4000);
