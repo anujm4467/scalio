@@ -13,7 +13,7 @@ import { getEnvConfig } from './misc/env-config-loader';
 import { AppConfig } from './models';
 
 let config: AppConfig;
-let ENVIRONMENT = process.env['NODE_ENV'] || 'development';
+let ENVIRONMENT = 'development';
 
 function loadEnvironmentAndConfigurations() {
   let isVerboseTest = false;
@@ -55,7 +55,7 @@ let isDebugging = false;
 const webEnvConfigs = getEnvConfig();
 
 // Read the supplied arguments
-process.argv.forEach(function(val) {
+process.argv.forEach(function (val) {
   if (val != null && typeof val === 'string') {
     if (val === '-debug') isDebugging = true;
   }
