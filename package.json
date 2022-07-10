@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "install:all": "bash ./scripts/install_all.sh",
-    "build": "bash ./scripts/build.sh",
+    "build": "nest build",
     "build:nest": "nest build",
     "build:angular": "cd angular-src && ng build --aot --prod",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
