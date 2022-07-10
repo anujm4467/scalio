@@ -9,7 +9,13 @@ import { getHttpsOptionsFromConfig } from './misc';
 async function bootstrap() {
   // Create the app and allow cors and HTTPS support (if configured)
   const app = await NestFactory.create(AppModule, {
-    cors: config.CORS_OPTIONS,
+    cors:
+    {
+      "origin": "*",
+      "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+      "preflightContinue": false,
+      "optionsSuccessStatus": 204
+    },
     // Will work only if SSH is configured on the related environment config, if not, normal HTTP will be used
     httpsOptions: getHttpsOptionsFromConfig(),
   });
